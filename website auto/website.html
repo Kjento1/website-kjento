@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audi RS7</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            display: none;
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        /* Galerij sectie */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .gallery img {
+            margin-bottom: 20px;
+            max-width: 500px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        /* Voorpagina stijl */
+        .hero-section {
+            text-align: center;
+            padding: 100px 0;
+            background-color: #333;
+            color: #fff;
+        }
+        .hero-section h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero-section p {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Audi RS7</h1>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#overview">Overzicht</a>
+    <a href="#specs">Specificaties</a>
+    <a href="#gallery">Galerij</a>
+</nav>
+
+<section class="hero-section" id="home">
+    <h1>Audi RS7</h1>
+    <p>Ervaar de ultieme kracht en luxe.</p>
+    <img src="https://cdn.motor1.com/images/mgl/kJ74N/s1/2020-audi-rs7-sportback-in-glacier-white.jpg" alt="Audi RS7">
+</section>
+
+<section id="overview">
+    <h2>Overzicht</h2>
+    <p>De Audi RS7 is een high-performance sportwagen geproduceerd door Audi AG.</p>
+    <p>Het combineert luxe met sportiviteit en biedt een opwindende rijervaring.</p>
+    <p>Met zijn krachtige motor en geavanceerde technologieën is de RS7 een ultieme expressie van prestatie en stijl.</p>
+</section>
+
+<section id="specs">
+    <h2>Specificaties</h2>
+    <ul>
+        <li>Motor: 4.0-liter V8</li>
+        <li>Vermogen: 600 pk</li>
+        <li>Koppel: 800 Nm</li>
+        <li>Acceleratie (0-100 km/u): 3.6 seconden</li>
+        <li>Topsnelheid: 250 km/u (begrensd)</li>
+    </ul>
+        <img src="https://www.nl.audi.be/content/dam/nemo/models/a7/rs-7-sportback/my-2021/_update/1920x1080-gallery/1920x1080-audi-rs-7-sportback-my2021-1539.jpg?imwidth=1459" alt="Audi RS7">
+</section>
+
+<section id="gallery">
+    <h2>Galerij</h2>
+    <div class="gallery">
+        <img src="https://www.motortrend.com/uploads/sites/11/2019/09/2020-Audi-RS-7-front-three-quarter-in-motion-3.jpg" alt="Audi RS7 Vooraanzicht">
+        <img src="https://www.nl.audi.be/content/dam/nemo/models/a7/rs-7-sportback/my-2021/_update/1920x1080-gallery/1920x1080-audi-rs-7-sportback-my2021-1545.jpg?imwidth=1459" alt="Audi RS7 Zijaanzicht">
+        <img src="https://www.nl.audi.be/content/dam/nemo/models/a7/rs-7-sportback/my-2021/_update/1920x1080-gallery/1920x1080-audi-rs-7-sportback-my2021-1547.jpg?imwidth=1459" alt="Audi RS7 Interieur">
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const navLinks = document.querySelectorAll("nav a");
+        const sections = document.querySelectorAll("section");
+
+        navLinks.forEach(link => {
+            link.addEventListener("click", function(event) {
+                event.preventDefault();
+                const targetId = this.getAttribute("href").substring(1);
+                sections.forEach(section => {
+                    if (section.id === targetId) {
+                        section.style.display = "block";
+                    } else {
+                        section.style.display = "none";
+                    }
+                });
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
